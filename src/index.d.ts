@@ -16,7 +16,7 @@ export interface Options {
   debug: boolean;
 }
 
-export interface ViewContent {
+export interface ViewContentPayload {
   content_ids: string[] | string;
   content_type: string;
   content_name: string;
@@ -25,7 +25,7 @@ export interface ViewContent {
   currency: string;
 }
 
-export interface AddToCart {
+export interface AddToCartPayload {
   content_ids: string[] | string;
   content_type: string;
   content_name?: string;
@@ -40,4 +40,7 @@ export function init(
   options?: Options
 ): void;
 export function pageView(): void;
-export function track(title: string, data: ViewContent | AddToCart): void;
+export function track(
+  title: string,
+  data: ViewContentPayload | AddToCartPayload
+): void;
