@@ -3,9 +3,10 @@
   "version": "0.1.2",
   "description": "Pixel Kit for React",
   "main": "dist/fb-pixel.js",
+  "types": "src/index.d.ts",
   "scripts": {
-    "start": "export NODE_ENV=development&& webpack-dev-server --config webpack.config.dev.js",
-    "bundle": "export NODE_ENV=production&& webpack -p --config webpack.config.dist.js",
+    "start": "export NODE_ENV=development && webpack-dev-server --config webpack.config.dev.js",
+    "bundle": "export NODE_ENV=production && webpack -p --config webpack.config.dist.js",
     "lint": "eslint src/ --fix",
     "clean": "rm -rf node_modules"
   },
