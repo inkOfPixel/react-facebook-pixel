@@ -17,21 +17,21 @@ export interface Options {
 }
 
 export interface ViewContentPayload {
-  content_ids: string[] | string;
-  content_type: string;
-  content_name: string;
-  content_category: string;
-  value: number;
-  currency: string;
+  content_ids?: string[];
+  content_type?: "product" | "product_group";
+  content_name?: string;
+  contents?: { id: string; quantity: number }[];
+  value?: number;
+  currency?: string;
 }
 
 export interface AddToCartPayload {
-  content_ids: string[] | string;
-  content_type: string;
+  content_ids?: string[];
+  content_type?: "product" | "product_group";
   content_name?: string;
-  content_category: string;
-  value: number;
-  currency: string;
+  contents?: { id: string; quantity: number }[];
+  value?: number;
+  currency?: string;
 }
 
 export function init(
